@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 """ Binarize Image
 
 DESCRIPTION/CONTEXT
@@ -20,9 +20,9 @@ b/w images in ./temp-[IMAGENAME]
 
 RUN
 ---
-    >>> ls
+    $ ls
     binarize_image.py  image1.jpg image2.JPH
-    >>> python binarize_image.py image1.JPG image2.JPG
+    $ python binarize_image.py image1.JPG image2.JPG
 
 TO DO
 -----
@@ -52,8 +52,6 @@ def binarize_image(paths):
                 filepath = os.path.join(temp_dir_path, filename)
                 cv2.imwrite(filepath, bin_img)
 
-
 if __name__ == "__main__":
     paths = ["./"+str(x) for x in sys.argv if x != "binarize_image.py"]
     binarize_image(paths)
-
